@@ -1,0 +1,497 @@
+@font-face {
+  font-family: LufthansaHead;
+  src: url(https://www.albatros.de/assets/fonts/LufthansaHeadWeb-Thin.woff2) format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  
+}
+
+@font-face {
+  font-family: LufthansaHead;
+  src: url(https://www.albatros.de/assets/fonts/LufthansaHeadWeb-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LufthansaHead;
+  src: url(https://www.albatros.de/assets/fonts/LufthansaHeadWeb-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LufthansaText;
+  src: url(https://www.albatros.de/assets/fonts/LufthansaTextWeb-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LufthansaText;
+  src: url(https://www.albatros.de/assets/fonts/LufthansaTextWeb-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LufthansaText;
+  src: url(https://www.albatros.de/assets/fonts/LufthansaTextWeb-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+*, ::before, ::after { box-sizing: border-box; }
+body{
+  font-family:"LufthansaText","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align:center;
+  line-height:1.5em;
+background: rgb(255,255,255);
+background: -moz-linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(246,249,252,1) 100%);
+background: -webkit-linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(246,249,252,1) 100%);
+background: linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(246,249,252,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f6f9fc",GradientType=1);
+}
+hr {
+  border:none;
+  background:#E0E4CC;
+  height:1px;
+/*   width:60%;
+  display:block;
+  margin-left:0; */
+}
+.container {
+  max-width: 1600px; 
+  margin: 1em auto; 
+  padding:30px;
+  border-radius:5px;
+
+}
+@media screen and (max-width: 600px) {
+.productcont {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-content: space-around;
+}
+}
+
+@media screen and (min-width: 768px) {
+.productcont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: space-around;
+}
+}
+
+@media screen and (min-width: 992px) {
+.productcont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: space-around;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.productcont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: space-around;
+}
+}
+
+.productname {
+font-family:"LufthansaHead","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:#05164D; 
+    font-weight: 800;
+    margin-top: 16px;
+}
+.product {
+  padding:1em; 
+  border:1px solid #E0E4CC; 
+  margin-right:1em; 
+  border-radius:5px;
+  flex: 0 1 calc(33% - 1em); /* Jedes Produkt nimmt bis zu einem Drittel der Breite ein, minus etwas Abstand */
+  margin: 0.5em;
+  box-sizing: border-box;
+  background: white;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+.product-description {
+    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    margin-bottom: 1em; /* Abstand zum Button-Bereich */
+}
+@media (max-width: 600px) {
+    .product {
+        flex: 0 1 calc(50% - 1em); /* Auf kleinen Bildschirmen nehmen Produkte bis zur Hälfte der Breite ein */
+    }
+}
+.cart-container {
+  border:1px solid #E0E4CC;
+  border-radius:5px;
+  margin-top:1em;
+  padding:1em;
+  background: white;
+}
+button, input[type="submit"] { 
+    color:#fff; 
+    background: #05164D;
+    border:1px solid #05164D;  
+    padding:0.6em 1em;
+    font-size:1em; 
+    font-weight: 700;
+    line-height:1; 
+    border-radius: 4px;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    margin-top: 30px;
+    width: 100%;
+}
+button:hover, input[type="submit"]:hover {
+    background: #e9ecef;
+    border:1px solid #e9ecef;
+    color:#05164D;
+    cursor: pointer;
+}
+table {
+  margin-bottom:1em;
+  border-collapse:collapse;
+}
+table td, table th {
+  text-align:left
+;  padding:0.25em 1em;
+  border-bottom:1px solid #E0E4CC;
+}
+#carttotals {
+  margin-right:0;
+  margin-left:auto;
+}
+.cart-buttons {
+  width:150px;
+  margin-right:0;
+  margin-left:auto;
+  display:flex;
+  justify-content:flex-end;
+  padding:1em 0;
+}
+#emptycart {
+  margin-right:1em;
+}
+table td:nth-last-child(1) {
+  text-align:right;
+}
+.message {
+  border-width: 1px 0px;
+  border-style:solid;
+  border-color:#A7DBD8;
+  color:#679996;
+  padding:0.5em 0;
+  margin:1em 0;
+}
+.remove-item {
+    padding: 5px 8px;
+    border-radius: 40px;
+    background: #7d7d7d;
+    border:1px solid #7d7d7d;
+}
+select {
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 0.3em;
+    border: 1px solid #E0E4CC;
+}
+/* Stil für das Adressfeld */
+#address {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Stil für den Checkout-Button */
+#checkout {
+    width: 100%;
+    background: #05164D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-size:1em; 
+    font-weight: 700;
+}
+
+#checkout:hover {
+    background: #e9ecef;
+    color:#05164D;
+}
+/* Lightbox-Hintergrund */
+#lightbox {
+  position: fixed;
+  z-index: 100;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Stil für das Bild innerhalb der Lightbox */
+#lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+}
+.over-max-points {
+    color: red; /* oder eine andere auffällige Farbe */
+    font-weight: bold;
+}
+.product-image {
+    max-width: 100%; /* Stellt sicher, dass das Bild nicht breiter als sein Container ist */
+    height: auto;    /* Erhält das Seitenverhältnis des Bildes */
+    display: block;  /* Verhindert unerwünschte weiße Räume unter dem Bild */
+    margin: 0 auto;  /* Zentriert das Bild, falls es kleiner als der Container ist */
+    border-radius: 5px; /* Optional: Fügt abgerundete Ecken hinzu */
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-content {
+  background: #fefefe;
+  max-width: 600px;
+  width: 90%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+    background-color: #fefefe;
+    margin: 20% auto; 
+    padding: 50px;
+    border: 1px solid #888;
+    width: 90%; 
+    }
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-ok {
+    padding: 10px 30px;
+    background: #05164D;
+    border:0px!important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal-ok:hover {
+    background: #e9ecef;
+    border:0px!important; 
+}
+
+.intro {
+    text-align: left;
+}
+
+.leeren { 
+    color:#fff; 
+    background: #ff7f7f;
+    border:1px solid #ff7f7f;  
+    padding: 5px;
+    font-size: 0.8em;
+    line-height:1; 
+    border-radius: 4px;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.leeren:hover, .leeren:focus, .leeren:active {
+    background: red;
+    border:1px solid red;
+    color:#fff;
+    cursor: pointer;
+}
+#floatingPoints {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #05164D;
+    font-weight: 700;
+    color: #fff;
+    padding: 0px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.close-text {
+    color: #05164D;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.add-to-cart-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 195px;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 3px 13px -2px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  transition: 0.4s ease;
+  overflow: hidden;
+}
+
+/* Hover- & Active-Effekte */
+.add-to-cart-button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 .2rem #cbd3eb;
+  border: 0px !important;
+}
+.add-to-cart-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 0 0.2rem rgba(252, 186, 3, 0.45);
+}
+
+/* Zustand NACH dem Klick, wenn das Produkt als "added" markiert wurde */
+.add-to-cart-button.added {
+  background: #2fbf30;
+  box-shadow: 0 0 0 0.2rem rgba(11, 252, 3, 0.45);
+  color: #ffffff;
+}
+.add-to-cart-button.added .add-to-cart {
+  display: none; /* Verstecke den „normalen“ Button-Text */
+}
+.add-to-cart-button.added .added-to-cart {
+  display: block; /* Zeige den „Hinzugefügt“-Text */
+}
+.added-to-cart {
+  display: none;
+}
+
+/* Das Einkaufswagen-Icon fällt nach dem Klick minimal nach unten */
+.add-to-cart-button.added .cart-icon {
+  animation: drop 0.3s forwards;
+  animation-delay: 0.18s;
+}
+
+/* Die weißen Boxen links */
+.add-to-cart-box {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  top: -8px;
+  fill: #fff;
+  transition: 0.4s ease;
+}
+.box-1 {
+  left: 23px;
+  transform: rotate(45deg);
+}
+.box-2 {
+  left: 32px;
+  transform: rotate(63deg);
+}
+.add-to-cart-button.added .box-1,
+.add-to-cart-button.added .box-2 {
+  top: 18px; /* Sie rutschen etwas nach unten */
+}
+
+/* Das grüne Häkchen („tick“) wird aufgezoomt */
+.tick {
+  background: #146230;
+  border-radius: 50%;
+  position: absolute;
+  left: 28px;
+  top: 5px;
+  z-index: 2;
+  transform: scale(0);
+}
+.add-to-cart-button.added .tick {
+  animation: grow 0.6s forwards;
+  animation-delay: 0.7s;
+}
+
+/* Kleine Keyframe-Animationen für Icon und Häkchen */
+@keyframes drop {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(1px); }
+}
+@keyframes grow {
+  0%   { transform: scale(0);   }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1);   }
+}
+
+/* Falls du auf sehr kleinen Screens die Buttons anpassen willst: */
+@media (max-width: 600px) {
+  .add-to-cart-button {
+    width: 100%;
+    margin-top: 1em;
+    min-width: auto;
+  }
+}
+
+.product button.addtocart {
+  margin-top: auto;  /* Erzwingt, dass der Button zum "Rest" nach unten rutscht */
+}

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFX Shop</title>
+  <link rel="stylesheet" href="shop-styling.css" />
+  <script src="shop-scripts.js" defer></script>
+</head>
+<body>
+<div id="floatingPoints"><p style="color: #fff;" id="remaining"></p></div>
+
+<div class="container">
+    
+    <div id="alerts"></div>
+    <div class="productcont">
+        <!-- Existing Products -->
+        <!-- ... Ihre existierenden Produkt-HTML-Blöcke ... -->
+
+        <!-- Neue Produkte mit Farb- und Größenauswahl -->
+        <div class="product">
+            <h3 class="productname">Zipper Unisex</h3>
+            <p class="price">3 Punkte</p>
+              <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/aa0eff3d-6817-422d-8b79-94b390eb9725.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+            <p>Verschiedene Farben und <a href="https://forms.albatros.de/willkommen-bei-albatros#masstabellen" style="font-weight:bold">Größen.</a></p>
+                        <select class="color">
+                <option value="">Farbe wählen</option>
+                <option value="Schwarz">Schwarz</option>
+                <option value="Blau">Blau</option>
+            </select>
+            <select class="size">
+                <option value="">Größe wählen</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">2XL</option>
+                <option value="XXL">3XL</option>
+                <option value="XXL">4XL</option>
+            </select>
+            <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+        </div>
+        
+        
+ <div class="product">
+    <h3 class="productname">Hoodie Unisex</h3>
+    <p class="price">3 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/577c2c89-2178-479c-a8c6-126c80f35123.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+<p>Verschiedene Farben und <a href="https://forms.albatros.de/willkommen-bei-albatros#masstabellen" style="font-weight:bold">Größen.</a></p>
+            <select class="color">
+                <option value="">Farbe wählen</option>
+                <option value="Schwarz">Schwarz</option>
+                <option value="Blau">Blau</option>
+            </select>
+            <select class="size">
+                <option value="">Größe wählen</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">2XL</option>
+                <option value="XXL">3XL</option>
+                <option value="XXL">4XL</option>
+            </select>
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>       
+        
+        
+        <div class="product">
+            <h3 class="productname">Herren T-Shirt</h3>
+            <p class="price">3 Punkte</p>
+            <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/b8111698-5456-4dcb-ab45-c48ef1892c7c.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+<p>Verschiedene Farben und <a href="https://forms.albatros.de/willkommen-bei-albatros#masstabellen" style="font-weight:bold">Größen.</a></p>
+            <select class="color">
+                <option value="">Farbe wählen</option>
+                <option value="Schwarz">Schwarz</option>
+                <option value="Blau">Blau</option>
+            </select>
+            <select class="size">
+                <option value="">Größe wählen</option>
+                <option value="Regular-XS">Regular-XS</option>
+                <option value="Regular-S">Regular-S</option>
+                <option value="Regular-M">Regular-M</option>
+                <option value="Regular-L">Regular-L</option>
+                <option value="Regular-XL">Regular-XL</option>
+                <option value="Regular-2XL">Regular-2XL</option>
+                <option value="Regular-3XL">Regular-3XL</option>
+                <option value="Regular-4XL">Regular-4XL</option>
+
+                <option value="Slim-XS">Slim-XS</option>
+                <option value="Slim-S">Slim-S</option>
+                <option value="Slim-M">Slim-M</option>
+                <option value="Slim-L">Slim-L</option>
+                <option value="Slim-XL">Slim-XL</option>
+                <option value="Slim-2XL">Slim-2XL</option>
+                <option value="Slim-3XL">Slim-3XL</option>
+                <option value="Slim-4XL">Slim-4XL</option>
+
+                <option value="-Long-XS">Long-XS</option>
+                <option value="Long-S">Long-S</option>
+                <option value="Long-M">Long-M</option>
+                <option value="Long-L">Long-L</option>
+                <option value="Long-XL">Long-XL</option>
+                <option value="Long-2XL">Long-2XL</option>
+                <option value="Long-3XL">Long-3XL</option>
+                <option value="Long-4XL">Long-4XL</option>
+            </select>
+            <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+        </div>
+        
+        
+                <div class="product">
+            <h3 class="productname">Herren Polo-Shirt</h3>
+            <p class="price">4 Punkte</p>
+            <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/46117085-e993-4f1b-b0b3-e758a16c91f9.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+<p>Verschiedene Farben und <a href="https://forms.albatros.de/willkommen-bei-albatros#masstabellen" style="font-weight:bold">Größen.</a></p>
+            <select class="color">
+                <option value="">Farbe wählen</option>
+                <option value="Schwarz">Schwarz</option>
+                <option value="Blau">Blau</option>
+            </select>
+            <select class="size">
+                <option value="">Größe wählen</option>
+                <option value="Regular-XS">Regular-XS</option>
+                <option value="Regular-S">Regular-S</option>
+                <option value="Regular-M">Regular-M</option>
+                <option value="Regular-L">Regular-L</option>
+                <option value="Regular-XL">Regular-XL</option>
+                <option value="Regular-2XL">Regular-2XL</option>
+                <option value="Regular-3XL">Regular-3XL</option>
+                <option value="Regular-4XL">Regular-4XL</option>
+
+                <option value="Slim-XS">Slim-XS</option>
+                <option value="Slim-S">Slim-S</option>
+                <option value="Slim-M">Slim-M</option>
+                <option value="Slim-L">Slim-L</option>
+                <option value="Slim-XL">Slim-XL</option>
+                <option value="Slim-2XL">Slim-2XL</option>
+                <option value="Slim-3XL">Slim-3XL</option>
+                <option value="Slim-4XL">Slim-4XL</option>
+
+                <option value="-Long-XS">Long-XS</option>
+                <option value="Long-S">Long-S</option>
+                <option value="Long-M">Long-M</option>
+                <option value="Long-L">Long-L</option>
+                <option value="Long-XL">Long-XL</option>
+                <option value="Long-2XL">Long-2XL</option>
+                <option value="Long-3XL">Long-3XL</option>
+                <option value="Long-4XL">Long-4XL</option>
+            </select>
+            <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+        </div>
+        
+        
+                        <div class="product">
+            <h3 class="productname">Damen T-Shirt</h3>
+            <p class="price">3 Punkte</p>
+            <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/b8111698-5456-4dcb-ab45-c48ef1892c7c.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+<p>Verschiedene Farben und <a href="https://forms.albatros.de/willkommen-bei-albatros#masstabellen" style="font-weight:bold">Größen.</a></p>
+            <select class="color">
+                <option value="">Farbe wählen</option>
+                <option value="Schwarz">Schwarz</option>
+                <option value="Blau">Blau</option>
+            </select>
+            <select class="size">
+                <option value="">Größe wählen</option>
+                <option value="Regular-XS">Regular-XS</option>
+                <option value="Regular-S">Regular-S</option>
+                <option value="Regular-M">Regular-M</option>
+                <option value="Regular-L">Regular-L</option>
+                <option value="Regular-XL">Regular-XL</option>
+                <option value="Regular-2XL">Regular-2XL</option>
+                <option value="Regular-3XL">Regular-3XL</option>
+
+
+                <option value="Plus-XS">Plus-XS</option>
+                <option value="Plus-S">Plus-S</option>
+                <option value="Plus-M">Plus-M</option>
+                <option value="Plus-L">Plus-L</option>
+                <option value="Plus-XL">Plus-XL</option>
+                <option value="Plus-2XL">Plus-2XL</option>
+                <option value="Plus-3XL">Plus-3XL</option>
+              </select>
+            <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+        </div>
+        
+        
+                                <div class="product">
+            <h3 class="productname">Damen Polo-Shirt</h3>
+            <p class="price">4 Punkte</p>
+            <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/8bd2ea24-e159-4507-9199-acf0289249af.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+<p>Verschiedene Farben und <a href="https://forms.albatros.de/willkommen-bei-albatros#masstabellen" style="font-weight:bold">Größen.</a></p>
+            <select class="color">
+                <option value="">Farbe wählen</option>
+                <option value="Schwarz">Schwarz</option>
+                <option value="Blau">Blau</option>
+            </select>
+            <select class="size">
+                <option value="">Größe wählen</option>
+                <option value="Regular-XS">Regular-XS</option>
+                <option value="Regular-S">Regular-S</option>
+                <option value="Regular-M">Regular-M</option>
+                <option value="Regular-L">Regular-L</option>
+                <option value="Regular-XL">Regular-XL</option>
+                <option value="Regular-2XL">Regular-2XL</option>
+
+
+
+                <option value="Plus-XS">Plus-XS</option>
+                <option value="Plus-S">Plus-S</option>
+                <option value="Plus-M">Plus-M</option>
+                <option value="Plus-L">Plus-L</option>
+                <option value="Plus-XL">Plus-XL</option>
+                <option value="Plus-2XL">Plus-2XL</option>
+
+                
+                                <option value="-Long-XS">Long-XS</option>
+                <option value="Long-S">Long-S</option>
+                <option value="Long-M">Long-M</option>
+                <option value="Long-L">Long-L</option>
+                <option value="Long-XL">Long-XL</option>
+                <option value="Long-2XL">Long-2XL</option>
+
+              </select>
+            <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+        </div>
+        
+        
+      <div class="product">
+    <h3 class="productname">Rucksack</h3>
+    <p class="price">6 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/f9744230-7209-4097-83d5-041eaeae1db3.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>Urban Lite Anti-Diebstahl-Rucksack.</p>
+
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>
+
+
+<div class="product">
+    <h3 class="productname">Powerbank</h3>
+    <p class="price">2 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/5f92425c-f1b3-4f59-b01f-aaf724ab6e15.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>Philips Powerbank mit 10.000 mAh.</p>
+   
+  <button class="addtocart" style="background: #690404;border: 1px solid #690404" disabled>Nicht auf Lager</button>
+</div>
+
+
+<div class="product">
+    <h3 class="productname">Lunchbox</h3>
+    <p class="price">2 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/041c318f-4214-4ed0-bfa9-e95db5cb627f.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>Lunchbox Take a Break.</p>
+     
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>
+
+
+<div class="product">
+    <h3 class="productname">Ladekabel</h3>
+    <p class="price">2 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/f0a9359a-ffab-4a2f-afb1-fcd88ba864ee.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>All-in-One Ladekabel.</p>
+
+
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>
+
+
+
+
+<div class="product">
+    <h3 class="productname">Smartphone Charger</h3>
+    <p class="price">2 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/189d976b-856d-4628-9f03-2f11700abe5a.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>Für iPhone,  Apple Watch und AirPods.</p>
+
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>
+
+
+<div class="product">
+    <h3 class="productname">Einkaufskorb</h3>
+    <p class="price">3 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/02a3efbe-c9a7-46fd-8d28-af8d3c2b7e1c.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>Reisenthel - Einkaufskorb.</p>
+
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>
+
+<div class="product">
+    <h3 class="productname">Kennzeichenhalterung</h3><img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/78e4128c-a3ea-4841-9cbf-32684b7c6c28.png" class="product-image">
+    <p class="price" style="display:none;">0 Punkte</p>
+    <img src="https://assets.prd.heyflow.com/flows/w4Pa4CDI2xStK7J7snXA/www/assets/1f983175-059f-49e1-aba5-ae37d73df6e6.png" alt="Produktbild" class="product-image" onclick="openLightbox(this.src)">
+    <p>Auto Kennzeichenhalterung.</p>
+
+    <button class="addtocart add-to-cart-button">
+  <!-- Die beiden kleinen Boxen -->
+  <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+  <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect width="24" height="24" rx="2" fill="#ffffff"></rect>
+  </svg>
+<!-- „Abgehakt“-Kreis (wird erst nach Klick sichtbar) -->
+  <svg class="tick" xmlns="http://www.w3.org/2000/svg" 
+       width="24" height="24" viewBox="0 0 24 24">
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 
+                            2 12s4.48 10 10 10 
+                            10-4.48 10-10S17.52 2 
+                            12 2zM9.29 16.29L5.7 
+                            12.7c-.39-.39-.39-1.02 0-1.41.39-.39 
+                            1.02-.39 1.41 0L10 
+                            14.17l6.88-6.88c.39-.39 
+                            1.02-.39 1.41 0 .39.39.39 
+                            1.02 0 1.41l-7.59 
+                            7.59c-.38.39-1.02.39-1.41 
+                            0z">
+    </path>
+  </svg>
+
+  <!-- Text normal und Text nach Hinzufügen -->
+  <span class="add-to-cart">Hinzufügen</span>
+  <span class="added-to-cart">Hinzugefügt</span>
+</button>
+</div>
+
+
+
+    </div>
+   
+    <div class="cart-container">
+        <h2>Warenkorb</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Deine Bestellung:</strong></th>
+                    <th><strong> </strong></th>
+                </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+        </table>
+        
+        <table id="carttotals">
+            <tr><td> </td><td> </td></tr>
+            <tr>
+                <td> </td>
+                <td><span id="total">0</span> <span id="itemsquantity" style="display:none">0</span></td>
+            
+            </tr>
+        </table>
+     
+        <div class="cart-buttons">
+            <button id="emptycart" class="leeren">Warenkorb leeren</button>
+          </div>
+    </div>
+</div>
+
+<div id="pointWarning" style="display: none; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc;">
+    Zu viele Punkte verwendet. Bitte entferne Produkte aus dem Warenkorb, um die Bestellung abzuschließen.
+</div>
+
+<div id="lightbox" class="modal" onclick="closeLightbox()">
+    <div class="modal-content" style="cursor: pointer;">
+        <img src="" alt="Lightbox-Bild" onclick="closeLightbox()">
+        <p class="close-text" onclick="closeLightbox()">Klicken zum Schließen</p>
+    </div>
+</div>
+
+
+<div id="modalAlert" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p id="modalMessage"></p>
+        <button id="modalOkButton" class="modal-ok">Verstanden</button>
+    </div>
+</div>
+
+</body>
+</html>
