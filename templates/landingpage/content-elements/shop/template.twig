@@ -1,9 +1,10 @@
+<div data-bsi-element="shop-UEyFnQ">
 <div id="floatingPoints"><p style="color: #fff;" id="remaining"></p></div>
 
 <div class="container">
     
     <div id="alerts"></div>
-    <div class="productcont">
+    <div class="productcont" data-bsi-element-part="product-list">
         <!-- Existing Products -->
         <!-- ... Ihre existierenden Produkt-HTML-Blöcke ... -->
 
@@ -428,9 +429,8 @@
   <span class="add-to-cart">Hinzufügen</span>
   <span class="added-to-cart">Hinzugefügt</span>
 </button>
+    </div>
 </div>
-
-
 <div class="product">
     <h3 class="productname">Powerbank</h3>
     <p class="price">2 Punkte</p>
@@ -440,6 +440,7 @@
   <button class="addtocart" style="background: #690404;border: 1px solid #690404" disabled>Nicht auf Lager</button>
 </div>
 
+</div>
 
 <div class="product">
     <h3 class="productname">Lunchbox</h3>
@@ -642,7 +643,7 @@
     </div>
    
     <div class="cart-container">
-        <h2>Warenkorb</h2>
+        <h2 data-bsi-element-part="cart-heading">Warenkorb</h2>
         <table>
             <thead>
                 <tr>
@@ -664,19 +665,19 @@
         </table>
      
         <div class="cart-buttons">
-            <button id="emptycart" class="leeren">Warenkorb leeren</button>
+            <button id="emptycart" class="leeren" data-bsi-element-part="cart-empty-button">Warenkorb leeren</button>
           </div>
     </div>
 </div>
 
-<div id="pointWarning" style="display: none; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc;">
+<div id="pointWarning" data-bsi-element-part="point-warning" style="display: none; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; color: #8a6d3b; background-color: #fcf8e3; border-color: #faebcc;">
     Zu viele Punkte verwendet. Bitte entferne Produkte aus dem Warenkorb, um die Bestellung abzuschließen.
 </div>
 
 <div id="lightbox" class="modal" onclick="closeLightbox()">
     <div class="modal-content" style="cursor: pointer;">
         <img src="" alt="Lightbox-Bild" onclick="closeLightbox()">
-        <p class="close-text" onclick="closeLightbox()">Klicken zum Schließen</p>
+        <p class="close-text" onclick="closeLightbox()" data-bsi-element-part="lightbox-close-text">Klicken zum Schließen</p>
     </div>
 </div>
 
@@ -685,7 +686,8 @@
     <div class="modal-content">
         <span class="close-button">&times;</span>
         <p id="modalMessage"></p>
-        <button id="modalOkButton" class="modal-ok">Verstanden</button>
+        <button id="modalOkButton" class="modal-ok" data-bsi-element-part="modal-ok-button">Verstanden</button>
     </div>
 </div>
 
+</div>
