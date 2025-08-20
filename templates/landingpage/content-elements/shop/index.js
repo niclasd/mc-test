@@ -1,14 +1,14 @@
-const {cx} = require('@bsi-cx/design-build');
+const {cx, part} = require('@bsi-cx/design-build');
 
 module.exports = cx.contentElement
   .withElementId('shop-UEyFnQ')
   .withLabel('Shop')
   .withParts(
-    cx.part.withPartId('product-list').withLabel('Produktliste'),
-    cx.part.withPartId('cart-heading').withLabel('Warenkorb-Überschrift'),
-    cx.part.withPartId('cart-empty-button').withLabel('Warenkorb leeren'),
-    cx.part.withPartId('point-warning').withLabel('Punktwarnung'),
-    cx.part.withPartId('lightbox-close-text').withLabel('Lightbox schließen'),
-    cx.part.withPartId('modal-ok-button').withLabel('OK-Schaltfläche')
+    part.withId('product-list').withLabel('Produktliste'),
+    part.withId('cart-heading').withLabel('Warenkorb-Überschrift'),
+    part.withId('cart-empty-button').withLabel('Warenkorb leeren'),
+    part.withId('point-warning').withLabel('Punktwarnung'),
+    part.withId('lightbox-close-text').withLabel('Lightbox schließen'),
+    part.withId('modal-ok-button').withLabel('OK-Schaltfläche')
   )
   .withFile(require('./template.twig'));
