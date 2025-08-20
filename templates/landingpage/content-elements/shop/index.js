@@ -1,6 +1,6 @@
 const {cx} = require('@bsi-cx/design-build');
 
 module.exports = cx.contentElement
-  .withId('shop')
+  .withElementId('shop-UEyFnQ')
   .withLabel('Shop')
-  .withTemplate(require('./template.twig'));
+  .withFile(require('./template.twig'));
