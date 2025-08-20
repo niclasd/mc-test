@@ -1,4 +1,6 @@
 require('./styles/styles.scss');
+require('../../shop-styling.css');
+require('../../shop-scripts.js');
 
 const {cx, SchemaVersion, Locale} = require('@bsi-cx/design-build');
 
