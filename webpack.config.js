@@ -3,11 +3,21 @@ const package = require('./package.json');
 
 const {BuildConfig, WebpackConfigBuilder, Version, DesignType, ModuleConfig} = require('@bsi-cx/design-build');
 
+function getDate() {
+    const currentDate = new Date();
+    return ("0" + currentDate.getDate()).slice(-2) + "-" + ("0"+(currentDate.getMonth()+1)).slice(-2) + "-" +
+        currentDate.getFullYear();
+}
+
+// const lp25DEWithDate = getDate()+'-albatros-lp-de-cx-25.2';
+const lp24DEWithDate = getDate()+'-albatros-lp-de-cx-24.2';
+const lp24ENWithDate = getDate()+'-albatros-lp-en-cx-24.2';
+
 const landingpageBuildConfig = new BuildConfig()
-  .withName('master-template-cx-22.0-landingpage')
+  .withName(lp24DEWithDate)
   .withVersion(package.version)
   .withDesignType(DesignType.LANDINGPAGE)
-  .withTargetVersion(Version.CX_22_0)
+  .withTargetVersion(Version.CX_24_2)
   .withRootPath(path.resolve(__dirname, 'templates', 'landingpage'))
   .withAssetResourceRuleFilename('static/[name][ext]')
   .withPropertiesFilePath(path.resolve(__dirname, 'properties.js'))
@@ -17,60 +27,20 @@ const landingpageBuildConfig = new BuildConfig()
       .withName('main')
       .withPath('main.js'))
   .withAdditionalFilesToCopy({
-    from: path.resolve(__dirname, 'templates', 'shared', 'static', 'header.png'),
-    to: 'static/header.png',
-  });
-      
-
-const websiteBuildConfig = new BuildConfig()
-  .withName('master-template-cx-22.0-website')
-  .withVersion(package.version)
-  .withDesignType(DesignType.WEBSITE)
-  .withTargetVersion(Version.CX_22_0)
-  .withRootPath(path.resolve(__dirname, 'templates', 'website'))
-  .withAssetResourceRuleFilename('static/[name][ext]')
-  .withPropertiesFilePath(path.resolve(__dirname, 'properties.js'))
-  .withModulesRootPath('modules')
-  .withModules(
-    new ModuleConfig()
-      .withName('main')
-      .withPath('main.js'))
-  .withAdditionalFilesToCopy({
-    from: path.resolve(__dirname, 'templates', 'shared', 'static', 'header.png'),
-    to: 'static/header.png',
+    from: path.resolve(__dirname, 'templates', 'shared', 'static', 'logo.svg'),
+    to: 'static/logo.svg',
   });
 
 module.exports = WebpackConfigBuilder.fromConfigs(
-  websiteBuildConfig.clone()
-    .withName('master-template-cx-1.3-website')
-    .withTargetVersion(Version.CX_1_3)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  websiteBuildConfig.clone()
-    .withName('master-template-cx-22.0-website')
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  websiteBuildConfig.clone()
-    .withName('master-template-cx-23.2-website')
-    .withTargetVersion(Version.CX_23_2)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  websiteBuildConfig.clone()
-    .withName('master-template-cx-24.2-website')
-    .withTargetVersion(Version.CX_24_2)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
+  // landingpageBuildConfig.clone()
+  //   .withName(lp25DEWithDate)
+  //   .withTargetVersion(Version.CX_25_2)
+  //   .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
   landingpageBuildConfig.clone()
-    .withName('master-template-cx-1.3-landingpage-de')
-    .withTargetVersion(Version.CX_1_3)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
+      .withName(lp24DEWithDate)
+      .withTargetVersion(Version.CX_24_2)
+      .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
   landingpageBuildConfig.clone()
-    .withName('master-template-cx-22.0-landingpage-de')
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  landingpageBuildConfig.clone()
-    .withName('master-template-cx-23.2-landingpage-de')
-    .withTargetVersion(Version.CX_23_2)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  landingpageBuildConfig.clone()
-    .withName('master-template-cx-24.2-landingpage-de')
-    .withTargetVersion(Version.CX_24_2)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js'))
-  /*landingpageBuildConfig.clone()
-    .withName('master-template-cx-22.0-landingpage-en')
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-en.js'))*/);
+      .withName(lp24ENWithDate)
+      .withTargetVersion(Version.CX_24_2)
+      .withPropertiesFilePath(path.resolve(__dirname, 'properties-en.js')));
