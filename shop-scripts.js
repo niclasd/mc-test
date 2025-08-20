@@ -1,3 +1,4 @@
+if (typeof document !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
 
     var totalPointsAvailable = 20; // Gesamtpunktzahl, die der Nutzer ausgeben darf
@@ -369,3 +370,4 @@ window.scrollTo(0, 0);
     }
 
 }); // Ende DOMContentLoaded
+}
