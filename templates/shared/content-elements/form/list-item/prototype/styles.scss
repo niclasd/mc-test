@@ -1,0 +1,15 @@
+@import "../../../../styles/styles.scss";
+
+.group-list-up,
+.group-list-down
+{
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (max-width: 673px) {
+    .list-group-items-checkbox {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}

@@ -1,0 +1,13 @@
+{% apply spaceless %}
+    {% set recaptchaElementId = elementId ?: 'recaptcha-es8WAZ' %}
+    {% set recaptchaElementPartId = elementPartId ?: 'recaptcha-part-xMHmU5' %}
+    {% set recaptchaImageSrc = imageSrc ?: bsi_cx_asset('./recaptcha.png') %}
+
+    <div data-bsi-element="{{ recaptchaElementId }}" class="{{ 'bsi-element-' ~ recaptchaElementId }} mb-4" data-bsi-element-part="{{ recaptchaElementPartId }}">
+        <img data-bsi-remove-if="live" src="{{ recaptchaImageSrc }}" class="figure-img" alt="reCAPTCHA" />
+        <label data-bsi-remove-if="live">reCAPTCHA</label>
+        <input data-bsi-remove-if="live" type="text" data-bsi-form-field-type="captcha" value="Google reCAPTCHA" id="g-recaptcha-response" name="g-recaptcha-response">
+        <div class="g-recaptcha" data-sitekey="the site key from the google api recaptcha registration">
+        </div>
+    </div>
+{% endapply %}

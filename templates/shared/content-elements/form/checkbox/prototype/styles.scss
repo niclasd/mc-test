@@ -1,0 +1,17 @@
+@mixin styles($id: 'checkbox-24CNSe') {
+  .bsi-element-#{$id} {
+    &.bsi-checkbox-spacing-hide {
+      margin-bottom: 0 !important;
+    }
+
+    .form-check-input {
+      -webkit-appearance: none;
+    }
+
+    @media screen and (prefers-color-scheme: dark) {
+      .form-check-label {
+        color: bsiProperty('darkModeTextColor', #ffffff);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin styles($id: 'recaptcha-es8WAZ') {
+  .bsi-element-#{$id} {
+    label, input {
+      display: none;
+    }
+    img {
+      width: 80px;
+    }
+    .rc-anchor-normal {
+      width: 230px !important;
+      .rc-anchor-content {
+        width: 157px !important;
+      }
+    }
+    .rc-anchor-logo-portrait {
+      margin-left: 6px !important;
+    }
+    .rc-anchor-pt {
+      left: 0 !important;
+      width: 222px !important;
+    }
+  }
+}

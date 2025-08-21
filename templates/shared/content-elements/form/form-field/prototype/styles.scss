@@ -1,0 +1,67 @@
+@import "flatpickr/dist/flatpickr";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@mixin styles($id: 'form-field-REEhtN') {
+  .bsi-element-#{$id} {
+    .flatpickr-input {
+      -webkit-appearance: none;
+
+      &.form-control[readonly] {
+        background-color: #fff;
+      }
+    }
+
+    .input-container {
+      position: relative;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding-right: 30px;
+    }
+
+    .input-container i {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .format-invalid-feedback {
+      margin-top: 0.25rem;
+      font-size: 0.875em;
+      color: #dc3545;
+    }
+
+    input[type=range] {
+      border: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    input[type=file]::file-selector-button,
+    input[type=file]::-webkit-file-upload-button {
+      background-color: rgba(0, 0, 0, 0.05) !important;
+      border: none;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+      }
+    }
+
+
+  }
+
+  .was-validated .bsi-element-#{$id} .input-container:has(input:invalid) .invalid-feedback {
+    display: block;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    .form-label {
+      color: bsiProperty('darkModeTextColor', #ffffff);
+    }
+  }
+}

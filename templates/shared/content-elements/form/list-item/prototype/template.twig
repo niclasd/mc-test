@@ -1,0 +1,15 @@
+{% apply spaceless %}
+{% set listItemElementId = elementId ?: 'listItemElement-ad97e5' %}
+
+<li data-bsi-element="{{ listItemElementId }}" class="list-group-item d-flex justify-content-between align-items-center">
+	<div class="d-flex align-items-center">
+		<input class="form-check-input list-group-items-checkbox" type="checkbox" checked>
+		&nbsp;&nbsp;
+		<span data-bsi-element-part="itemLabel">Item</span>
+	</div>
+	<div class="d-flex">
+		<button type="button" class="group-list-down bi bi-chevron-down"></button>
+		<button type="button" class="group-list-up bi bi-chevron-up"></button>
+	</div>
+</li>
+{% endapply %}

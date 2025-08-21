@@ -1,0 +1,46 @@
+{% apply spaceless %}
+    {% set formWidth = (formWidth ?: properties.formWidth) ?: 'bsi-form-wide' %}
+    {% set formLayout = (formLayout ?: properties.formLayout) ?: 'bsi-form-card-visible' %}
+    {% set formBorderRadius = (formBorderRadius ?: properties.formBorderRadius) ?: 'bsi-corner-rounded' %}
+    {% set formLabelPosition = (formLabelPosition ?: properties.formLabelPosition) ?: 'bsi-form-label-top' %}
+    {% set formColor = (formColor ?: properties.formColor) ?: 'bsi-form-color-primary' %}
+    {% set formButtonLayout = (formButtonLayout ?: properties.formButtonLayout) ?: 'bsi-form-btn-outline' %}
+    {% set formTooltipStyle = (formTooltipStyle ?: properties.formTooltipStyle) ?: 'bsi-form-info-as-text' %}
+    {% set formValidationSummary = (formValidationSummary ?: properties.formValidationSummary) ?: 'bsi-form-hide-valdiation-summary' %}
+    {% set formValidationSummaryMessage = (formValidationSummaryMessage ?: properties.formValidationSummaryMessage) ?: 'Bitte folgende Felder ausfüllen:' %}
+
+    <div x-data="formElement" data-bsi-element="form-container-692qIu" class="bsi-dm-bg-color bsi-element-form-container-692qIu container mb-3 {{ formWidth }} {{ formLayout }} {{ formBorderRadius }} {{ formLabelPosition }} {{ formTooltipStyle }} {{ formColor }} {{ formButtonLayout }} {{ formValidationSummary }}">
+        <div class="card border-light shadow bsi-dm-bg-color">
+            <div class="card-body">
+                <form x-init="initForm" x-on:submit="submitForm" data-bsi-element-part="form-container-part-6eHZEX" id="form" data-bsi-show-form-type-field class="needs-validation" novalidate>
+                    <div class="form-validation-summary invalid-feedback">
+                        <p>{{ formValidationSummaryMessage }}</p>
+                    </div>
+                    <div data-bsi-dropzone="form-container-dropzone-zsY6UI">
+                        {% block form_container_dropzone %}{% endblock %}
+                    </div>
+                    <div data-bsi-remove-if="draft">
+                        <ul class="text-danger" data-bsi-form-validation="">
+                            <li data-bsi-form-validation-item=""></li>
+                        </ul>
+                    </div>
+                    <div class="bsi-form-btn-row hstack flex-wrap">
+                        <div class="bsi-form-btn d-flex">
+                            <div data-bsi-dropzone="form-container-dropzone-btn-left-Q2L32x">
+                                {% block form_container_dropzone_btn_left %}{% endblock %}
+                            </div>
+                            <input type="submit" class="btn btn-submit btn-dm-submit" value="Submit"/>
+                            <input type="reset" class="btn btn-outline-dark" value="Reset"/>
+                            <div data-bsi-dropzone="form-container-dropzone-btn-right-uIS6Nj">
+                                {% block form_container_dropzone_btn_right %}{% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                    <div data-bsi-dropzone="form-container-dropzone-bottom-cJFI8U">
+                        {% block form_container_dropzone_bottom %}{% endblock %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endapply %}

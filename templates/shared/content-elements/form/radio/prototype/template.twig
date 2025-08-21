@@ -1,0 +1,27 @@
+{% apply spaceless %}
+    {% set radioElementId = elementId ?: 'radio-O6XCY3' %}
+    {% set radioElementPartId = elementPartId ?: 'radio-part-I0iU7X' %}
+    {% set radioFormTextPartId = formTextPartId ?: 'radio-part-text-NyYl9g' %}
+    {% set radioErrorRequiredPartId = errorRequiredPartId ?: 'radio-part-error-required-KCNwQh' %}
+    {% set radioGroupLabelText = (groupLabelText ?: properties.radioGroupLabelText) ?: bsi_cx_lorem(3) %}
+    {% set radioLabelText = (labelText ?: properties.radioLabelText) ?: bsi_cx_lorem(3) %}
+    {% set radioInfoText = (infoText ?: properties.radioInfoText) ?: "" %}
+    {% set radioErrorRequiredText = (errorRequiredText ?: properties.errorRequiredText) ?: 'Bitte füllen Sie dieses Feld aus.' %} {# TODO: make translatable #}
+
+    <div x-data="formRadio" data-bsi-element="{{ radioElementId }}" class="{{ 'bsi-element-' ~ radioElementId }} mb-4 bsi-form-element bsi-form-radio-element bsi-form-flex-label bsi-radio-block" data-bsi-element-part="{{ radioElementPartId }}">
+        <div class="bsi-form-input-element">
+            <div class="form-label-and-info-text">
+                <label class="form-label pt-0">{{ radioGroupLabelText }}</label>
+                <div data-bsi-element-part="{{ radioFormTextPartId }}" class="form-text">{{ radioInfoText }}</div>
+                <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-custom-class="bsi-tooltip" role="tooltip" aria-label="{{ radioInfoText }}"></i>
+            </div>
+            <div data-bsi-radio-group="" class="form-radio">
+                <div class="form-check" data-bsi-radio-item="">
+                    <input x-on:change="validateInput" class="form-check-input" type="radio" name="radio" id="radio1">
+                    <label class="form-check-label" for="radio1">{{ radioLabelText }}</label>
+                </div>
+            </div>
+            <div data-bsi-element-part="{{ radioErrorRequiredPartId }}" class="invalid-feedback"> {{ radioErrorRequiredText }} </div>
+        </div>
+    </div>
+{% endapply %}

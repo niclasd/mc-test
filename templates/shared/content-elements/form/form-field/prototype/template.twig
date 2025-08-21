@@ -1,0 +1,34 @@
+{% apply spaceless %}
+{% set formFieldElementId = elementId ?: 'form-field-REEhtN' %}
+{% set formFieldElementPartId = elementPartId ?: 'form-field-part-H72Mnu' %}
+{% set formFieldTextPartId = formTextPartId ?: 'form-field-part-text-T9yfhp' %}
+{% set formFieldErrorRequiredPartId = errorRequiredPartId ?: 'form-field-part-error-required-904DIx' %}
+{% set formFieldErrorInvalidPartId = errorInvalidPartId ?: 'form-field-part-error-invalid-5g1mUc' %}
+{% set formFieldLabelText = (labelText ?: properties.formFieldLabelText) ?: bsi_cx_lorem(3) %}
+{% set formFieldInfoText = (infoText ?: properties.formFieldInfoText) ?: "" %}
+{% set formFieldErrorRequiredText = (errorRequiredText ?: properties.errorRequiredText) ?: 'Bitte füllen Sie dieses Feld aus.' %}
+{# TODO: make translatable #}
+{% set formFieldErrorInvalidText = (errorInvalidText ?: properties.errorInvalidText) ?: 'Der Wert, den Sie für dieses Feld eingegeben haben, ist ungültig.' %}
+{# TODO: make translatable #}
+
+<div x-data="formField" data-bsi-element="{{ formFieldElementId }}" class="{{ 'bsi-element-' ~ formFieldElementId }} mb-4 bsi-form-element bsi-form-field-element bsi-form-flex-label" data-bsi-element-part="{{ formFieldElementPartId }}">
+	<div class="bsi-form-input-element mb-3 bsi-label-floating-element">
+		<div class="form-label-and-info-text">
+			<label for="field" class="form-label">{{ formFieldLabelText }}</label>
+			<div data-bsi-element-part="{{ formFieldTextPartId }}" class="form-text">{{ formFieldInfoText }}</div>
+			<i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-custom-class="bsi-tooltip" role="tooltip" aria-label="{{ formFieldInfoText }}"></i>
+		</div>
+		<div class="input-container">
+			<div class="input-field-and-icon-container">
+				<input x-init="initFormFieldInput" x-on:input="validateInput" type="text" class="form-control bsi-form-field-input {{ properties.flatpickrInput }}" id="field" value="">
+			</div>
+			<div data-bsi-element-part="{{ formFieldErrorRequiredPartId }}" class="invalid-feedback">
+				{{ formFieldErrorRequiredText }}
+			</div>
+		</div>
+		<div data-bsi-element-part="{{ formFieldErrorInvalidPartId }}" class="d-none logic-validation">
+			{{ formFieldErrorInvalidText }}
+		</div>
+	</div>
+</div>
+{% endapply %}

@@ -1,0 +1,21 @@
+{% apply spaceless %}
+    {% set textAreaElementId = elementId ?: 'text-area-J5z17p' %}
+    {% set textAreaElementPartId = elementPartId ?: 'text-area-part-61guvT' %}
+    {% set textAreaFormTextPartId = formTextPartId ?: 'text-area-part-text-gFR3M5' %}
+    {% set textAreaErrorRequiredPartId = errorRequiredPartId ?: 'text-area-part-error-required-ZPOyD8' %}
+    {% set textAreaLabelText = (labelText ?: properties.textAreaLabelText) ?: bsi_cx_lorem(3) %}
+    {% set textAreaInfoText = (infoText ?: properties.textAreaInfoText) ?: "" %}
+    {% set textAreaErrorRequiredText = (errorRequiredText ?: properties.errorRequiredText) ?: 'Bitte füllen Sie dieses Feld aus.' %} {# TODO: make translatable #}
+
+    <div data-bsi-element="{{ textAreaElementId }}" class="{{ 'bsi-element-' ~ textAreaElementId }} mb-4 bsi-form-element bsi-form-textarea bsi-form-flex-label" data-bsi-element-part="{{ textAreaElementPartId }}">
+        <div class="bsi-form-input-element bsi-label-floating-element mb-3">
+            <div class="form-label-and-info-text">
+                <label  for="field" class="form-label">{{ textAreaLabelText }}</label>
+                <div  data-bsi-element-part="{{ textAreaFormTextPartId }}" class="form-text">{{ textAreaInfoText }}</div>
+                <i  class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-custom-class="bsi-tooltip" role="tooltip" aria-label="{{ textAreaInfoText }}"></i>
+            </div>
+            <textarea class="form-control" id="field" rows="5" value=""></textarea>
+            <div data-bsi-element-part="{{ textAreaErrorRequiredPartId }}" class="invalid-feedback"> {{ textAreaErrorRequiredText }} </div>
+        </div>
+    </div>
+{% endapply %}

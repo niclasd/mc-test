@@ -1,0 +1,51 @@
+{% apply spaceless %}
+{% set pollElementId = elementId ?: 'poll-wni8em' %}
+{% set pollElementPartId = elementPartId ?: 'poll-part-diJBU7' %}
+{% set pollLeftPartId = leftPartId ?: 'poll-part-left-fw2gb8' %}
+{% set pollRightPartId = rightPartId ?: 'poll-part-right-Cz7PuT' %}
+{% set pollFormTextPartId = formTextPartId ?: 'poll-part-text-Xi7bOp' %}
+{% set pollErrorRequiredPartId = errorRequiredPartId ?: 'poll-part-error-required-lL6aMT' %}
+{% set pollLabelText = (labelText ?: properties.pollLabelText) ?: 'Wie wahrscheinlich ist es, dass Sie unser Produkt weiter empfehlen werden?' %}
+{# TODO: make translatable #}
+{% set pollLabelLeftText = (labelLeftText ?: properties.pollLabelLeftText) ?: 'Unwahrscheinlich' %}
+{# TODO: make translatable #}
+{% set pollLabelRightText = (labelRightText ?: properties.pollLabelRightText) ?: 'Sehr wahrscheinlich' %}
+{# TODO: make translatable #}
+{% set pollInfoText = (infoText ?: properties.pollInfoText) ?: "" %}
+{% set pollErrorRequiredText = (errorRequiredText ?: properties.errorRequiredText) ?: 'Bitte füllen Sie dieses Feld aus.' %}
+{# TODO: make translatable #}
+
+{% set pollRange = range(1,10) %}
+{% set pollValueList = '' %}
+{% for value in pollRange %}
+	{% set pollValueList = pollValueList ~ value ~ (loop.last == false ? "\n" : '') %}
+{% endfor %}
+
+<div x-data="formPoll" data-bsi-element="{{ pollElementId }}" class="{{ 'bsi-element-' ~ pollElementId }} mb-4 bsi-form-element bsi-form-radio-element bsi-poll-nps">
+	<div data-bsi-element-part="{{ pollElementPartId }}" data-bsi-form-field-fixed-type>
+		<div class="form-label-and-info-text">
+			<label for="poll-input" class="form-label pt-0 d-block">{{ pollLabelText }}</label>
+			<div data-bsi-element-part="{{ pollFormTextPartId }}" class="form-text">{{ pollInfoText }}</div>
+			{# Remove support until requested <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-custom-class="bsi-tooltip" role="tooltip" aria-label="{{ pollInfoText }}"></i> #}
+		</div>
+		<input type="number" name="poll-input" id="poll-input" min="1" max="10" step="1" value="" required="" class="bsi-poll-number-input"/>
+		<fieldset role="radiogroup" x-init="initRadioGroup" class="bsi-poll-radio-group d-flex flex-wrap justify-content-center" data-bsi-remove-if="draft"></fieldset>
+		<div class="bsi-poll-radio-group d-flex flex-wrap justify-content-center" data-bsi-remove-if="live">
+			{% for value in pollRange %}
+				<div class="form-check form-check-inline radio-group bsi-poll-radio-item">
+					<input class="form-check-input bsi-poll-radio-input" type="radio" id="poll-input-{{ value }}" value="{{ value }}"/>
+					<label class="form-check-label bsi-poll-radio-label" for="poll-input-{{ value }}">{{ value }}</label>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="d-flex justify-content-between mt-1 text-nowrap small">
+			<label class="poll-label" data-bsi-element-part="{{ pollLeftPartId }}">{{ pollLabelLeftText }}</label>
+			<label class="poll-label" data-bsi-element-part="{{ pollRightPartId }}">{{ pollLabelRightText }}</label>
+		</div>
+
+		<div data-bsi-element-part="{{ pollErrorRequiredPartId }}" class="invalid-feedback">
+			{{ pollErrorRequiredText }}
+		</div>
+	</div>
+</div>
+{% endapply %}

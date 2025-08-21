@@ -1,0 +1,7 @@
+@mixin styles($id: 'text-area-J5z17p') {
+  .bsi-element-#{$id} {
+    .form-control {
+      height: auto !important;
+    }
+  }
+}
